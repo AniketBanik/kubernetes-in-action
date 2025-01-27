@@ -22,7 +22,7 @@ jobs:
           AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
 
       - name: Build the Docker image
-        run: docker build -t clo835-week3 .
+        run: docker build -t clo835-week3 -f path/to/Dockerfile .
 
       - name: Tag the Docker image
         run: docker tag clo835-week3:latest 885626464789.dkr.ecr.us-east-1.amazonaws.com/clo835-week3:latest
